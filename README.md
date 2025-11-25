@@ -40,13 +40,13 @@
 
 - Pranjal 
 
--Anshak Soni
+- Anshak Soni
 
--Himanshu rana
+- Himanshu rana
 
--Akshay
+- Akshay
 
--Kartik Sharma
+- Kartik Sharma
 
 
 
