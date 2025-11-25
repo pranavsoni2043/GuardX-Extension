@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>GuardX</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+
+    <img src="logo.png" class="logo" alt="GuardX" />
+    <h1>GuardX</h1>
+    <p class="tagline">Protect what you type</p>
+
+    <div class="row">
+      <label class="switch">
+        <input type="checkbox" id="toggleProtection">
+        <span class="slider"></span>
+      </label>
+      <div id="statusBadge" class="badge on">Active</div>
+    </div>
+
+    <div class="site-risk">
+      <div>Site risk:</div>
+      <div id="siteRisk" class="risk low">Low (0/10)</div>
+    </div>
+
+    <div class="stats">
+      <h3>Activity</h3>
+      <div class="stat-row"><span>Pages scanned</span><span id="pagesScanned">0</span></div>
+      <div class="stat-row"><span>Detections</span><span id="detectionsToday">0</span></div>
+      <div class="stat-row"><span>Warnings shown</span><span id="warningsShown">0</span></div>
+    </div>
+
+    <div class="history-section">
+      <div class="history-title">Scan History</div>
+      <div id="historyList" class="history-list">
+        <!-- History entries injected by JS -->
+      </div>
+
+      <div class="button-row">
+    <button id="simulateScan" class="btn secondary">Simulate Scan</button>
+    <button id="downloadReport" class="btn primary">Download Report</button>
+</div>
+
+<div class="button-row">
+    <button id="resetData" class="btn danger">Reset Data</button>
+</div>
+
+
+      <p class="note">
+        Demo only — simulated GuardX scan & reporting.<br>
+        All data stays local to your browser.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="popup.js" defer></script>
+
+</body>
+</html>

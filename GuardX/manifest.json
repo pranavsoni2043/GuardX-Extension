@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GuardX",
+  "version": "1.0",
+  "description": "Alerts users when sensitive data is typed into web forms to prevent accidental exposure.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

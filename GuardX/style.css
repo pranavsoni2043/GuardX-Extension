@@ -1,0 +1,150 @@
+/*style.css*/
+/* ==== RESET + BASE ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #080a0f;
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* ==== HEADER (Glass + Gradient Glow) ==== */
+header {
+    height: 70vh;
+    padding: 40px 8%;
+    background: linear-gradient(135deg, #0d1117 0%, #0a0d12 100%);
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(255, 125, 35, 0.2), transparent 70%);
+    pointer-events: none;
+}
+
+nav .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff7d23, #ff9f50);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero {
+    max-width: 600px;
+    margin-top: 90px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    animation: fadeSlide 1s ease forwards;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero p {
+    margin-top: 20px;
+    opacity: 0.7;
+    font-size: 1.15rem;
+}
+
+/* CALL TO ACTION BUTTON */
+.cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7d23, #ff9f50);
+    box-shadow: 0 0 15px rgba(255, 125, 35, 0.4);
+    transition: .25s ease;
+}
+.cta-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 125, 35, .65);
+}
+
+/* ==== FEATURES SECTION ==== */
+.features {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #ff7d23;
+}
+
+/* ADVANCED GRID WITH SMOOTH GAP + GLASS CARDS */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+/* GLASSMORPHIC CARDS */
+.card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow border on hover */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,125,35,0.6), rgba(255,175,90,0.3));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card h3 {
+    color: #ff9f50;
+    margin-bottom: 12px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}

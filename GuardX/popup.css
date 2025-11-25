@@ -1,0 +1,278 @@
+/* ================================
+   GuardX Popup – Updated Styling
+================================ */
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 12px;
+  width: 280px;
+  background: #eef2f6;
+  color: #1e1e1e;
+}
+
+.container {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* Header */
+.logo {
+  width: 54px;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #ff6a00;
+  margin: 2px 0;
+}
+
+.tagline {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Toggle + Status */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #cfcfcf;
+  border-radius: 26px;
+  transition: .25s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 3px;
+  left: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: .25s;
+}
+
+.switch input:checked + .slider {
+  background: #ff6a00;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+}
+
+.badge.on { background: #2ecc71; }
+.badge.off { background: #e74c3c; }
+
+/* Site Risk Indicator */
+.site-risk {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: #f6f7f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.risk {
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.risk.low {
+  background: #e8f9ef;
+  color: #2f9a51;
+}
+
+.risk.medium {
+  background: #fff4df;
+  color: #d98500;
+}
+
+.risk.high {
+  background: #fde8e7;
+  color: #c03434;
+}
+
+/* Stats block */
+.stats {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 14px;
+  border: 1px solid #ececec;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+/* History */
+.history-section {
+  margin-top: 12px;
+}
+
+.history-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.history-list {
+  max-height: 165px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+.history-entry {
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.history-entry:last-child { border-bottom: none; }
+
+.history-url { font-weight: 600; font-size: 13px; }
+.history-risk { font-size: 13px; margin-top: 2px; }
+.history-reason { font-size: 12px; color: #666; margin-top: 2px; }
+.history-time { font-size: 11px; color: #888; margin-top: 2px; }
+
+/* Buttons */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 9px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.primary {
+  background: #ff6a00;
+  color: white;
+}
+
+.primary:hover {
+  background: #e25d00;
+}
+
+.secondary {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary:hover {
+  background: #1d4ed8;
+}
+
+/* ✅ Reset button styling */
+.reset-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px;
+  background: #b4b4b4;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.22s;
+}
+
+.reset-btn:hover {
+  background: #969696;
+}
+
+/* Footer note */
+.note {
+  font-size: 11px;
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+}
+.btn {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    flex: 1;
+    transition: 0.2s;
+}
+
+.btn.primary {
+    background: #ff6a00;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #e45d00;
+}
+
+.btn.secondary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #1d4ed8;
+}
+
+.btn.danger {
+    background: #dc2626;
+    color: white;
+}
+
+.btn.danger:hover {
+    background: #b91c1c;
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
